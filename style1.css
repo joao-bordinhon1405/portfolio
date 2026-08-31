@@ -1,0 +1,71 @@
+header{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 50px;
+    padding: 50px 30px;
+}
+a{
+    color: white;
+}
+footer{
+    color: white;
+    background-color: black;
+}
+.card-container{
+    position: relative;
+}
+nav{
+   background-color: black;
+}
+.link-grid{
+    
+    background-color: black;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+  /* justify-content: center; */
+  /* align-items: center */
+}
+/* usar cards */
+h1{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+h2{
+    font-size: 50px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+p{
+    text-align: center
+}
+button{
+    background-color: gray;
+    text-align: center;
+    font-size: 45px;
+}
+div{
+    color: white;    
+    background-color:black;
+    font-size: 30px;
+    /* background-color: cyan; */
+}
+  
+p{
+    color: white;
+    background-color: black;
+    font-size: 25px;
+}
+/* #caixa{
+    background-color: aqua;
+} */

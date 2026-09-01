@@ -1,0 +1,112 @@
+.class-la-liga{
+    color: black;
+    background-color: orange;
+    border: solid white;
+    border-radius: 10px;
+}
+.class-premier{
+    color: black;
+    background-color: white;
+    border: solid white;
+    border-radius: 10px;
+}
+.class-serie-a{
+    background-color: green;
+    color: black;
+    border: solid white;
+    border-radius: 10px;
+}
+.class-bundesliga{
+    background-color: red;
+    color: black;
+    border: solid white;
+    border-radius: 10px;
+}
+.class-ligue-1{
+    background-color: blue;
+    color: black;
+    border: solid white;
+    border-radius: 10px;
+}
+.class-bra{
+    background-color: yellow;
+    color: black;
+    border: solid white;
+    border-radius: 10px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+body{
+    background-color: #2b2b2b ;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #172554;
+    font-size: 40px;
+    padding: 30px;
+}
+a{
+    text-align: center;
+    border: 3px solid white;
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+}
+section{
+    font-size: 30px;
+    border: 3px solid white;
+    padding: 20px;
+    text-align: center;
+}
+footer{
+    border: 3px solid white;
+    background-color: #172554;
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.link-grid{
+    background-color: #172554;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+h3{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+p{  
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+button{
+    padding: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+

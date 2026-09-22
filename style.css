@@ -1,0 +1,78 @@
+body{
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+.produto{
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.produto:hover{
+    transform:translateY(-5px);
+}
+.imagem-produto{
+    width: 50%;
+    margin: 20px auto;
+    display: block;
+    transition: 0.3s;
+}
+.hero{
+    background-color: white;
+    border-radius: 20px;
+}
+.hero img{
+    width: 70%;
+    margin: auto;
+}
+.subtitulo-hero{
+    color: #555;
+}
+.hero-conteudo{
+    max-width: 550px;
+}
+.titulo-produto{
+    min-height: 60px;
+}
+.historia img{
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.texto-paixao{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.valor-card{
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.valor-card:hover{
+    transform:translateY(-5px);
+}
+.valores{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.formulario-contato{
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.formulario-contato .form-control{
+    border-radius: 10px;
+}
+.botao-contato{
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+.contato-card{
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.contato-card:hover{
+    transform:translateY(-5px);
+}

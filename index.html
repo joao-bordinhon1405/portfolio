@@ -4,22 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio | João Gabriel</title>
-    <style>
-         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
-        header { background: #1a252f; color: #fff; padding: 20px; text-align: center; }
-        nav { background: #2c3e50; padding: 10px; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        section { padding: 30px; max-width: 800px; margin: auto; border-bottom: 1px solid #ccc; }
-        .projeto { background: #f9f9f9; padding: 15px; border-left: 5px solid #3498db; margin-bottom: 15px; }
+        <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
+        header { background: #1a252f; color: #fff; padding: 30px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header p { margin: 10px 0 0 0; font-size: 1.1rem; color: #b2bec3; }
+        
+        
+        nav { 
+            background: #2c3e50; 
+            padding: 15px 10px; 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            gap: 100px; 
+        }
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1rem; 
+            transition: color 0.3s;
+        }
+        nav a:hover { 
+            color: #3498db; 
+        }
+        
+        section { padding: 40px 20px; max-width: 900px; margin: auto; border-bottom: 1px solid #eee; }
+        .projeto { background: #f9f9f9; padding: 20px; border-left: 5px solid #3498db; margin-bottom: 20px; border-radius: 4px; }
         footer { text-align: center; padding: 20px; background: #1a252f; color: #fff; }
     </style>
+
 </head>
 <body>
-    <header>
-        <h1>João Gabriel da Costa Bordinhon</h1>
-        <p>Estudante de Desenvolvimento de Software Multiplataforma - FATEC</p>
+        
+    <header style="background: #1a252f; color: #fff; padding: 40px 20px;">
+        <div style="max-width: 1000px; margin: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 30px;">
+            
+            <div style="flex: 3; text-align: left; white-space: nowrap;">
+                <h1 style="margin: 0; font-size: 2.2rem; letter-spacing: 0.5px; font-weight: 700;">João Gabriel da Costa Bordinhon</h1>
+                <p style="margin: 10px 0 0 0; font-size: 1.1rem; color: #3498db; font-weight: bold;">Estudante de Desenvolvimento de Software Multiplataforma</p>
+                <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #b2bec3;">FATEC São José dos Campos</p>
+            </div>
+            
+            <div style="flex: 1; display: flex; justify-content: flex-end; min-width: 160px;">
+                <img src="./imagens/foto.jpeg" alt="Foto de João Gabriel" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; object-position: center 10%; border: 4px solid #3498db; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+            </div>
+        </div>
     </header>
 
+
+    
     <nav>
         <a href="#apresentacao">Apresentação</a>
         <a href="#projetos-api">Projetos API</a>
@@ -29,21 +64,32 @@
         <a href="#contato">Contato</a>
     </nav>
 
+    
     <section id="apresentacao">
-        <h2>Apresentação Pessoal</h2>
-        <p>Olá! Meu nome é João Gabriel da Costa Bordinhon. Atualmente sou estudante do primeiro semestre no curso de Tecnologia em Desenvolvimento de Software Multiplataforma na FATEC São José dos Campos...</p>
+        <h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; display: inline-block;">Apresentação Pessoal</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; text-align: justify; color: #444; margin-top: 20px;">
+            Olá! Meu nome é <strong>João Gabriel da Costa Bordinhon</strong>. Atualmente sou estudante do primeiro semestre no curso de Tecnologia em Desenvolvimento de Software Multiplataforma na FATEC São José dos Campos. 
+            Tenho grande interesse pelas áreas de desenvolvimento web e ciência de dados, buscando constantemente aplicar a teoria em projetos práticos. Meu objetivo profissional atual é ingresar no mercado de trabalho por meio de uma oportunidade de estágio, onde eu possa colaborar com a equipe, evoluir minhas competências técnicas e aprender com profissionais experientes do setor.
+        </p>
     </section>
+
 
     <section id="projetos-api">
         <h2>Projetos API</h2>
         <div class="projeto">
-            <h3>Projeto API - 1º Semestre</h3>
-            <p><strong>Empresa Parceira:</strong> [Nome da empresa aqui - sem logo]</p>
-            <p><strong>O Problema:</strong> [Descreva a situação real / necessidade da empresa]</p>
-            <p><strong>Solução Desenvolvida:</strong> [Breve descrição do software/site criado]</p>
-            <p><strong>Tecnologias Utilizadas:</strong> [Ex: HTML, CSS, JavaScript]</p>
-            <p><strong>Contribuição Pessoal:</strong> [O que você fez no projeto]</p>
-            <p><a href="#" target="_blank">Link para o Repositório do Projeto</a></p>
+    <section id="projetos-api">
+        <h2>Projetos API</h2>
+        <div class="projeto">
+            <h3>Projeto API - 1º Semestre: Plataforma Socioeconômica</h3>
+            <p><strong>Parceiro / Cliente:</strong> FATEC São José dos Campos (Demanda de base acadêmica)</p>
+            <p><strong>O Problema:</strong> Havia a necessidade de analisar, estruturar e cruzar grandes volumes de índices socioeconômicos das regiões federativas brasileiras. O desafio do grupo foi receber um projeto estruturado originalmente por alunos do 3º semestre e evoluir sua inteligência de dados para realizar cálculos automatizados e cruzamento de informações geográficas de forma eficiente.</p>
+            <p><strong>Solução Desenvolvida:</strong> Desenvolvimento de um sistema focado no tratamento de dados socioeconômicos regionais. A aplicação recebe os indicadores das unidades federativas, realiza o cruzamento de dados analíticos e gera resultados que facilitam a visualização da disparidade ou crescimento entre as regiões brasileiras.</p>
+            <p><strong>Tecnologias Utilizadas:</strong> HTML5, CSS3, JavaScript, Python, Google Colab</p>
+            <p><strong>Contribuição Pessoal:</strong> Atuei na criação da interface visual do site / Ajudei a estruturar a lógica de cálculo dos índices.</p>
+            <p><a href="https://github.com/Time00-dev/api1--semestre" target="_blank">Link para o Repositório do Projeto Integrador</a></p>
+        </div>
+    </section>
+
         </div>
     </section>
 
@@ -62,17 +108,19 @@
         <ul>
             <li>Graduação em Desenvolvimento de Software Multiplataforma - FATEC SJC (Cursando)</li>
         </ul>
+         <p style="margin-top: 20px;">
+            <a href="JoãoGabriel curriculo.pdf" download style="background: #2c3e50; color: white; padding: 10px 15px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 0.9rem;">📥 Baixar Currículo em PDF</a>
+        </p>
     </section>
 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Link para o meu <a href="https://github.com" target="_blank">GitHub</a></p>
-        <p>Link para o meu <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+        <p>Link para o meu <a href="https://github.com/joao-bordinhon1405" target="_blank">GitHub</a></p>
+        <p>Link para o meu <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-da-costa-bordinhon-a41722436/" target="_blank">LinkedIn</a></p>
     </section>
 
     <footer>
         <p>&copy; 2026 - João Gabriel Bordinhon</p>
-        
     </footer>
 </body>
 </html>

@@ -1,0 +1,280 @@
+/* Reset básico para evitar margens indesejadas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Fundo do cabeçalho */
+.cabecalho {
+  background-color: #1C2126; /* Cor do card da sua referência escura (Original era #1E293B) */
+  border-bottom: 1px solid #2D333B;
+  padding: 45px 20px;
+  width: 100%;
+}
+
+/* Container que centraliza o conteúdo e mantém o alinhamento */
+.container-header {
+  max-width: 900px; /* Mesma largura da seção de Apresentação Pessoal */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Estilização dos textos */
+.info-texto h1 {
+  color: #F3F4F6;
+  font-size: 2rem; /* Tamanho grande do nome */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.info-texto .curso {
+  color: #38BDF8; /* Azul ciano da referência (Original era #3B82F6) */
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.info-texto .instituicao {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+}
+
+/* Estilização da foto redonda com borda azul */
+.foto-perfil {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%; /* Deixa perfeitamente redondo */
+  object-fit: cover; /* Evita que a foto fique esticada */
+  border: 3px solid #38BDF8; /* Borda azul em volta da foto */
+  display: block;
+}
+
+/* Ajuste automático para telas de celular */
+@media (max-width: 650px) {
+  .container-header {
+    flex-direction: column-reverse; /* Coloca a foto em cima e o texto embaixo no celular */
+    text-align: center;
+  }
+
+  .info-texto h1 {
+    font-size: 1.6rem;
+  }
+}
+/* Área central que segura todos os blocos */
+.conteudo-principal {
+  max-width: 1050px; /* Aumentado de 900px para deixar os blocos mais largos */
+  margin: 45px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Estilo dos blocos com azul um pouco mais forte e maior espaçamento interno */
+.bloco-secao {
+  background-color: #DBEAFE; /* Azul mais presente e definido que o anterior */
+  border: 1px solid #BFDBFE; /* Borda acompanhando o novo tom */
+  border-radius: 10px;
+  padding: 45px 50px; /* Aumentado para deixar o bloco mais alto e espaçoso */
+}
+
+/* Títulos das seções */
+.bloco-secao h2 {
+  color: #1E3A8A;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+/* Textos internos */
+.bloco-secao p {
+  color: #1E293B; /* Escurecido levemente para manter o contraste perfeito no novo fundo */
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.bloco-secao strong {
+  color: #0F172A;
+}
+
+/* Ajuste para celular */
+@media (max-width: 650px) {
+  .bloco-secao {
+    padding: 30px 22px;
+  }
+}
+/* Espaço maior entre o título do projeto e as informações */
+.exp-cabecalho {
+  margin-bottom: 12px;
+}
+
+/* Espaçamento entre cada tópico do projeto */
+.projeto-info p {
+  color: #1E293B;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+/* Rótulos (O Problema, Solução...) mais leves e elegantes em azul */
+.rotulo {
+  color: #1E3A8A;
+  font-weight: 600;
+}
+
+.projeto-link {
+  margin-top: 14px;
+}
+
+.projeto-link a {
+  color: #1E3A8A;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 0.98rem;
+}
+
+.projeto-link a:hover {
+  color: #2563EB;
+}
+/* Container que organiza em 6 em cima e 5 em baixo centralizados */
+.lista-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 820px; /* Largura calculada para caber exatamente 6 itens por linha */
+  margin: 0 auto; /* Centraliza o conjunto dentro do bloco azul */
+}
+
+/* Todas as tags exatamente com o mesmo tamanho */
+.skill-tag {
+  background-color: #1C2126;
+  color: #F3F4F6;
+  border: 1px solid #38BDF8;
+  width: 124px; /* Largura idêntica para todas (cabe "Google Colab" sem quebrar) */
+  padding: 10px 0; /* Altura uniforme */
+  text-align: center; /* Centraliza o texto dentro da caixinha */
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-tag:hover {
+  background-color: #0F172A;
+  transform: translateY(-2px);
+}
+/* Divisão em 2 colunas para Soft Skills e Idiomas */
+.grid-extras {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* Soft skills fica um pouco mais largo que idiomas */
+  gap: 35px;
+}
+
+.coluna-extra h3 {
+  color: #1E3A8A;
+  font-size: 1.08rem;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #BFDBFE;
+  padding-bottom: 6px;
+}
+
+/* Rodapé escuro combinando com o header */
+.rodape {
+  background-color: #1C2126;
+  border-top: 1px solid #2D333B;
+  padding: 40px 20px;
+  margin-top: 50px;
+  color: #F3F4F6;
+}
+
+.container-footer {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-info h3 {
+  font-size: 1.25rem;
+  color: #F3F4F6;
+  margin-bottom: 6px;
+}
+
+.footer-info p {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+}
+
+.links-contato {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-contato {
+  background-color: #162B32;
+  color: #38BDF8;
+  border: 1px solid #38BDF8;
+  padding: 9px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-contato:hover {
+  background-color: #38BDF8;
+  color: #0F172A;
+}
+
+/* Ajuste para celular */
+@media (max-width: 700px) {
+  .grid-extras {
+    grid-template-columns: 1fr; /* Empilha uma coluna embaixo da outra no celular */
+    gap: 25px;
+  }
+
+  .container-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links-contato {
+    justify-content: center;
+  }
+}
+body {
+  background-color: #283344; /* Substitui o #FFFFFF */
+}
+/* Centraliza a foto dentro do espaço dela */
+.foto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Impede que a foto seja esmagada em telas menores */
+}
+
+/* Estilo exato que você definiu, já limpo no CSS */
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 10%; /* Mantém o enquadramento focado no seu rosto */
+  border: 4px solid #38BDF8; /* Ou #3498db se preferir o azul um pouco mais fechado */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+}

@@ -46,10 +46,11 @@
 
 /* Estilização da foto redonda com borda azul */
 .foto-perfil {
-  width: 135px;
+  width: 150px;
   height: 135px;
-  border-radius: 50%; /* Deixa perfeitamente redondo */
-  object-fit: cover; /* Evita que a foto fique esticada */
+  border-radius: 50%
+  object-fit: cover; /* Deixa perfeitamente redondo */
+  object-position: center 75%; /* Evita que a foto fique esticada */
   border: 3px solid #38BDF8; /* Borda azul em volta da foto */
   display: block;
 }
@@ -154,20 +155,39 @@
 }
 
 /* Todas as tags exatamente com o mesmo tamanho */
+.lista-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .skill-tag {
   background-color: #1C2126;
   color: #F3F4F6;
   border: 1px solid #38BDF8;
-  width: 124px; /* Largura idêntica para todas (cabe "Google Colab" sem quebrar) */
-  padding: 10px 0; /* Altura uniforme */
-  text-align: center; /* Centraliza o texto dentro da caixinha */
+  width: auto; /* Remove o travamento de 124px */
+  padding: 10px 18px;
   border-radius: 8px;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+.skill-tag i {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.skill-tag:hover {
+  background-color: #0F172A;
+  transform: translateY(-2px);
+}
 .skill-tag:hover {
   background-color: #0F172A;
   transform: translateY(-2px);
@@ -278,3 +298,596 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: block;
 }
+/* =========================================
+   SEÇÃO DE PROJETOS EM DESTAQUE
+   ========================================= */
+
+/* Grade que coloca os 2 cards lado a lado no PC */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Estrutura de cada card individual */
+.card-projeto {
+  background-color: #1C2126; /* Combina com o cabeçalho e o print escuro */
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas no topo */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-5px);
+  border-color: #38BDF8;
+}
+
+/* Ajuste exato das duas imagens */
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 90%; /* Mude de 10% para 90% ou 100% */
+  border: 4px solid #38BDF8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+
+/* Área interna de texto e botões do card */
+.projeto-conteudo {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Faz o conteúdo esticar para alinhar os botões no rodapé */
+}
+
+.projeto-conteudo h3 {
+  color: #F3F4F6;
+  font-size: 1.18rem;
+  margin-bottom: 10px;
+}
+
+.projeto-conteudo p {
+  color: #CBD5E1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Etiquetas pequenas das tecnologias do projeto */
+.projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.projeto-tags span {
+  background-color: #0F172A;
+  color: #38BDF8;
+  border: 1px solid #1E3A8A;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Botões alinhados sempre na base do card */
+.projeto-botoes {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn-primario,
+.btn-secundario {
+  flex: 1;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primario {
+  background-color: #38BDF8;
+  color: #0F172A;
+}
+
+.btn-primario:hover {
+  background-color: #7DD3FC;
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: #F3F4F6;
+  border: 1px solid #475569;
+}
+
+.btn-secundario:hover {
+  border-color: #38BDF8;
+  color: #38BDF8;
+}
+
+/* Responsividade: empilha os cards no celular */
+@media (max-width: 768px) {
+  .grid-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-img {
+    height: 190px;
+  }
+}
+/* Corrige o título e textos dentro do card escuro */
+.card-projeto h3 {
+  color: #F3F4F6;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.resumo-curto {
+  color: #CBD5E1;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+/* Estilo da gaveta expansível */
+.detalhes-expansiveis {
+  margin-bottom: 18px;
+  background-color: #14181C;
+  border: 1px solid #2D333B;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.detalhes-expansiveis summary {
+  color: #38BDF8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.detalhes-expansiveis summary::-webkit-details-marker {
+  display: none;
+}
+
+.detalhes-expansiveis summary::before {
+  content: "▸ ";
+}
+
+.detalhes-expansiveis[open] summary::before {
+  content: "▾ ";
+}
+
+.detalhes-texto {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #2D333B;
+}
+
+.detalhes-texto p {
+  color: #E2E8F0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.detalhes-texto strong {
+  color: #38BDF8;
+}
+/* =========================================
+   SEÇÃO DE CURSOS E CERTIFICAÇÕES
+   ========================================= */
+
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card-curso {
+  background-color: #1C2126; /* Mesmo tom escuro dos cards de projeto */
+  border: 1px solid #334155;
+  border-left: 4px solid #38BDF8; /* Detalhe azul na lateral esquerda */
+  border-radius: 8px;
+  padding: 16px 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-curso:hover {
+  transform: translateY(-2px);
+  border-color: #38BDF8;
+}
+
+.curso-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.curso-topo h3 {
+  color: #F3F4F6;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Etiqueta com a carga horária */
+.curso-horas {
+  background-color: #0F172A;
+  color: #38BDF8;
+  border: 1px solid #1E3A8A;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap; /* Impede que "20h" quebre de linha */
+}
+
+.curso-instituicao {
+  color: #9CA3AF !important; /* Sobrescreve o azul escuro padrão de .bloco-secao p */
+  font-size: 0.88rem !important;
+  line-height: 1.4 !important;
+}
+
+/* No celular, empilha em 1 coluna */
+@media (max-width: 700px) {
+  .grid-cursos {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   SEÇÃO DE EXPERIÊNCIA PROFISSIONAL
+   ========================================= */
+
+.lista-experiencias {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item-experiencia {
+  background-color: #1C2126;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 22px 26px;
+}
+
+.exp-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.exp-topo h3 {
+  color: #F3F4F6;
+  font-size: 1.1rem;
+}
+
+.exp-data {
+  background-color: #0F172A;
+  color: #38BDF8;
+  border: 1px solid #1E3A8A;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.exp-empresa {
+  color: #9CA3AF !important;
+  font-size: 0.92rem !important;
+  margin-bottom: 12px;
+}
+
+.exp-topicos {
+  padding-left: 20px;
+  color: #CBD5E1;
+}
+
+.exp-topicos li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+.exp-topicos strong {
+  color: #38BDF8;
+}
+.skill-tag {
+  background-color: #1C2126;
+  color: #F3F4F6;
+  border: 1px solid #38BDF8;
+  padding: 10px 18px; /* Largura flexível para não cortar nenhum nome */
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espaço exato entre o ícone e o texto */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-tag i {
+  font-size: 1.25rem; /* Tamanho do ícone */
+}
+
+.skill-tag:hover {
+  background-color: #0F172A;
+  transform: translateY(-2px);
+}
+.skill-tag img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Deixa o ícone preto do GitHub branco para aparecer no fundo escuro */
+.icone-branco {
+  filter: invert(1);
+}
+.skill-tag svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: block;
+}
+/* =========================================
+   SOFT SKILLS E IDIOMAS
+   ========================================= */
+
+.grid-extras {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+}
+
+.card-extra {
+  background-color: #1C2126;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 24px 28px;
+}
+
+.card-extra h3 {
+  color: #F3F4F6;
+  font-size: 1.12rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2D333B;
+}
+
+.lista-soft {
+  padding-left: 18px;
+  color: #CBD5E1;
+}
+
+.lista-soft li {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.lista-soft strong {
+  color: #38BDF8;
+}
+
+/* Estilo dos Idiomas */
+.idioma-item {
+  margin-bottom: 20px;
+}
+
+.idioma-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.idioma-topo strong {
+  color: #F3F4F6;
+  font-size: 0.98rem;
+}
+
+.idioma-nivel {
+  background-color: #0F172A;
+  color: #38BDF8;
+  border: 1px solid #1E3A8A;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 8px;
+  background-color: #0F172A;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progresso {
+  height: 100%;
+  background-color: #38BDF8;
+  border-radius: 4px;
+}
+
+.idioma-detalhe {
+  color: #9CA3AF !important;
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
+}
+
+@media (max-width: 750px) {
+  .grid-extras {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   SEÇÃO DE FORMAÇÃO ACADÊMICA
+   ========================================= */
+
+.grid-formacao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card-formacao {
+  background-color: #1C2126;
+  border: 1px solid #334155;
+  border-top: 3px solid #38BDF8;
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.formacao-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.formacao-topo h3 {
+  color: #F3F4F6;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.formacao-status {
+  background-color: #0F172A;
+  color: #38BDF8;
+  border: 1px solid #1E3A8A;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.formacao-status.concluido {
+  color: #34D399;
+  border-color: #065F46;
+}
+
+.formacao-instituicao {
+  color: #9CA3AF !important;
+  font-size: 0.92rem !important;
+}
+
+@media (max-width: 750px) {
+  .grid-formacao {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   AJUSTE DO E-MAIL NO RODAPÉ
+   ========================================= */
+
+.email-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.link-email {
+  color: #38BDF8;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed #38BDF8;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.link-email:hover {
+  color: #7DD3FC;
+}
+
+.btn-copiar {
+  background-color: #283344;
+  color: #F3F4F6;
+  border: 1px solid #475569;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-copiar:hover {
+  border-color: #38BDF8;
+  color: #38BDF8;
+}
+
+@media (max-width: 700px) {
+  .email-box {
+    justify-content: center;
+  }
+}
+html {
+  scroll-behavior: smooth; /* Faz a página deslizar suavemente ao clicar no menu */
+}
+
+body {
+  background-color: #0F172A; /* Fundo mais profundo e moderno */
+}
+
+/* Barra de navegação fixa no topo */
+.navbar {
+  background-color: #14181C;
+  border-bottom: 1px solid #2D333B;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 14px 20px;
+}
+
+.nav-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-container a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-container a:hover {
+  color: #38BDF8;
+}
+
+/* Evita que o menu fixo cubra o título da seção ao clicar */
+section, footer {
+  scroll-margin-top: 65px;
+}
+
